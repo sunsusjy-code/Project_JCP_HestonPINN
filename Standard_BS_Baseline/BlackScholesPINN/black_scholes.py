@@ -6,7 +6,8 @@ import torch
 class BlackScholesPINN:
     def __init__(self, config):
         self.config = config
-        self.model = PINN()
+        # 把配置里的 layers 传进去
+        self.model = PINN(config["layers"])
         self.optimizer = torch.optim.Adam(self.model.parameters(), lr=config["lr"])
 
         # Prepare data

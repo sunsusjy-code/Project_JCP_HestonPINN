@@ -10,5 +10,6 @@
     "noise_variance": 0.5,
     "epochs": 2000,
     "lr": 1e-3,
-    "log_interval" : 200
+    "log_interval" : 200,
+    "layers": [2, 64, 64, 64, 1]
   }
